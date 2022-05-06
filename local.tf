@@ -1,4 +1,4 @@
-data "google_project" "project" {
+/* data "google_project" "project" {
     project_id = var.project_id
   
 }
@@ -37,3 +37,4 @@ algorithm = var.algorithm == null ? local.default_algorithms[local.purpose] : va
 labels = merge(data.google_projecr.project.labels, var.labels)
 
 
+*/
