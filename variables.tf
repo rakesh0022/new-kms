@@ -63,3 +63,9 @@ variable "destroy_Schedule_Duration" {
     default = 14
   
 }
+
+variable "default_algorithms" {
+    type = string
+    default = "GOOGLE_SYMETRIC_ENCRYPTION"
+  
+}
