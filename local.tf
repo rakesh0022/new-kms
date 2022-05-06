@@ -1,15 +1,15 @@
-/* data "google_project" "project" {
+/* 
+data "google_project" "project" {
     project_id = var.project_id
   
 }
 
-/*
 locals {
   
   purpose = var.purpose != "" ? var.purpose : ENCRYPT_DECRYPT
   rotation_period = local.purpose == "ENCRYPT_DECRYPT" ? var.rotation_period : null
 
-*/
+
 iam_additive_pairs = flatten ([
     for role in keys(var.iam_role_members) : [
      for member in lookup(var.iam_role_members, role, []) :
