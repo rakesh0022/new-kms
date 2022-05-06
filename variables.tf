@@ -1,18 +1,18 @@
 variable "project_id" {
     description = "project_id"
     type = string
-    default = qwiklabs-gcp-04-0643d1ecfa02
+    # default = qwiklabs-gcp-04-0643d1ecfa02
 }
 
 variable "key_ring" {
     type = string
-    default = rakesh-key-ring
+    # default = rakesh-key-ring
   
 }
 
 variable "key_name" {
     type = string
-    default = rakesh-key
+   # default = rakesh-key
   
 }
 
