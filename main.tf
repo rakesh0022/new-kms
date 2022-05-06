@@ -1,7 +1,7 @@
 resource "google_kms_crypto_key" "crypto_key" {
     name = var.key_name
     key_ring = var.key_ring
-    destroy_Schedule_Duration = var.destroy_Schedule_Duration
+    #destroy_Schedule_Duration = var.destroy_Schedule_Duration
 
     purpose = var.purpose
 
