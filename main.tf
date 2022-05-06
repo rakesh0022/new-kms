@@ -6,7 +6,7 @@ resource "google_kms_crypto_key" "crypto_key" {
     purpose = var.purpose
 
     version_template {
-        algorithm = local.algorithm
+        algorithm = var.algorithm
         protection_level = var.protection_level
     
 
