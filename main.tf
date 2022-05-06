@@ -17,14 +17,14 @@ resource "google_kms_crypto_key" "crypto_key" {
     lifecycle {
       prevent_destroy = false
     }
-    labels = local.labels
+    # labels = local.labels
 
 }
 
  
 
  resource "google_kms_crypto_key_iam_member" "iam_member" {
-     for_each = var.use_iam_binding ? {} : local.iam_additive
+     for_each = var.use_iam_binding # ? {} : local.iam_additive
      crypto_key_id = google_kms_crypto_key.crypto_key.self_link
      role = each.value["role"]
      member = each.value["member"]
