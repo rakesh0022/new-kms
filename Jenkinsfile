@@ -14,13 +14,11 @@ pipeline {
   stages {
     stage('Execute GCP Command') {
       steps {
-        withCredentials([string(credentialsId: 'google-sa', variable: 'GCP_CREDS_jenkins')]) {
-          withEnv(["GOOGLE_APPLICATION_CREDENTIALS=${GCP_CREDS}"]) {
+        withGoogleRobotCredentials(credentialsId: 'google-sa') {
             sh "gcloud config set project ${env.PROJECT_ID}"
             sh "${params.GCP_COMMAND} ${params.GCP_COMMAND_ARGS}"
           }
         }
       }
     }
-  }
 }
